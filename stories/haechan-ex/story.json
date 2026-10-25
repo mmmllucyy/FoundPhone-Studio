@@ -134,6 +134,24 @@
           "phone": ""
         }
       }
+    ],
+    "kakao": [
+      {
+        "id": "kkt-followup-1",
+        "title": "未知账号",
+        "body": "用这么干巴巴的语气跟欧巴说话的话我会难过的啊",
+        "time": "2026-10-25 00:16",
+        "sender": "未知账号",
+        "hidden": true
+      },
+      {
+        "id": "kkt-followup-2",
+        "title": "未知账号",
+        "body": "oo？",
+        "time": "2026-10-25 00:16",
+        "sender": "未知账号",
+        "hidden": true
+      }
     ]
   },
   "variables": {
@@ -231,14 +249,14 @@
           "value": 5
         },
         {
-          "type": "message",
-          "key": "kakao",
-          "value": "（00:16）未知账号：用这么干巴巴的语气跟欧巴说话的话我会难过的啊"
+          "type": "unlock",
+          "key": "kkt-followup-1",
+          "value": true
         },
         {
-          "type": "message",
-          "key": "kakao",
-          "value": "（00:16）未知账号：oo？"
+          "type": "unlock",
+          "key": "kkt-followup-2",
+          "value": true
         },
         {
           "type": "ending",
@@ -347,7 +365,10 @@
         }
       ],
       "ending": "待续：你选择了“你谁啊”。",
-      "expectUnlocked": []
+      "expectUnlocked": [
+        "kkt-followup-1",
+        "kkt-followup-2"
+      ]
     },
     {
       "name": "KakaoTalk选择沉默",

@@ -1,0 +1,380 @@
+{
+  "scriptVersion": 1,
+  "id": "haechan-ex-phone",
+  "title": "未读来电｜李楷灿的前任",
+  "description": "一部属于李楷灿前任的手机。输入 0606 进入普通开局；0908 是隐藏线索密码。打开 KakaoTalk 开始故事。",
+  "revision": 1,
+  "phone": {
+    "owner": "你",
+    "date": "2026-10-25",
+    "time": "23:06",
+    "passcode": "0606",
+    "wallpaper": "sage",
+    "theme": "dark",
+    "battery": 87,
+    "network": "5G",
+    "notifications": true
+  },
+  "installedApps": [
+    "phone",
+    "messages",
+    "contacts",
+    "photos",
+    "notes",
+    "settings",
+    "kakao",
+    "instagram",
+    "twitter",
+    "wechat",
+    "calendar",
+    "music"
+  ],
+  "contacts": [
+    {
+      "id": "haechan",
+      "name": "李楷灿",
+      "phone": "",
+      "bio": "前任。你们分开后，聊天框一直没有真正安静下来。"
+    },
+    {
+      "id": "friend",
+      "name": "朋友",
+      "phone": "",
+      "bio": "知道你和李楷灿过去的人。"
+    }
+  ],
+  "chats": [
+    {
+      "id": "chat-kakao-haechan",
+      "app": "kakao",
+      "title": "李楷灿",
+      "participants": [
+        "owner",
+        "haechan"
+      ],
+      "messages": [
+        {
+          "id": "kkt-1",
+          "title": "",
+          "body": "你还没睡？",
+          "senderId": "haechan",
+          "time": "2026-10-25 23:06"
+        },
+        {
+          "id": "kkt-2",
+          "title": "",
+          "body": "我看到你把以前的照片设成了隐藏。",
+          "senderId": "haechan",
+          "time": "2026-10-25 23:07"
+        },
+        {
+          "id": "kkt-3",
+          "title": "",
+          "body": "别装没看见。我们还没聊完。",
+          "senderId": "haechan",
+          "time": "2026-10-25 23:08"
+        },
+        {
+          "id": "kkt-4",
+          "title": "",
+          "body": "0606。你应该还记得这个日期吧。",
+          "senderId": "haechan",
+          "time": "2026-10-25 23:09"
+        }
+      ]
+    },
+    {
+      "id": "chat-kakao-friend",
+      "app": "kakao",
+      "title": "朋友",
+      "participants": [
+        "owner",
+        "friend"
+      ],
+      "messages": [
+        {
+          "id": "kkt-friend-1",
+          "title": "",
+          "body": "你真的还要回他消息吗？",
+          "senderId": "friend",
+          "time": "2026-10-25 22:51"
+        }
+      ]
+    }
+  ],
+  "content": {
+    "notes": [
+      {
+        "id": "note-0606",
+        "title": "没删掉的备忘录",
+        "body": "0606。你们第一次确认关系的日子。你以为自己早就忘了。",
+        "time": "2026-10-25 23:10",
+        "sender": "你",
+        "hidden": false
+      },
+      {
+        "id": "note-hidden-0908",
+        "title": "隐藏记录",
+        "body": "0908。那天发生的事，你们谁都没有向外人提过。打开这条记录，进入隐藏开局线索。",
+        "time": "2026-10-25 23:11",
+        "sender": "你",
+        "hidden": true,
+        "password": "0908"
+      }
+    ],
+    "photos": [
+      {
+        "id": "photo-old",
+        "title": "旧照片",
+        "body": "一张没有删除的合照。照片背面写着：别在凌晨做决定。",
+        "time": "2026-10-25 23:12",
+        "sender": "你",
+        "hidden": true
+      }
+    ],
+    "phone": [
+      {
+        "id": "missed-call-haechan",
+        "title": "李楷灿",
+        "body": "未接来电 · 23:04",
+        "time": "2026-10-25 23:04",
+        "sender": "系统",
+        "kind": "call",
+        "meta": {
+          "phone": ""
+        }
+      }
+    ]
+  },
+  "variables": {
+    "blacken": 0,
+    "reconcile": 0,
+    "route": "normal"
+  },
+  "events": [
+    {
+      "id": "start-story",
+      "label": "手机启动",
+      "type": "start",
+      "event": "start",
+      "target": "",
+      "conditions": [],
+      "logic": "and",
+      "actions": [
+        {
+          "type": "notification",
+          "key": "",
+          "value": "KakaoTalk 有未读消息。"
+        }
+      ],
+      "next": [],
+      "once": true,
+      "x": 80,
+      "y": 80
+    },
+    {
+      "id": "open-kakao",
+      "label": "打开 KakaoTalk",
+      "type": "event",
+      "event": "openApp",
+      "target": "kakao",
+      "conditions": [],
+      "logic": "and",
+      "actions": [
+        {
+          "type": "notification",
+          "key": "",
+          "value": "李楷灿：你还没睡？"
+        },
+        {
+          "type": "variable",
+          "key": "route",
+          "value": "normal"
+        }
+      ],
+      "next": [],
+      "once": true,
+      "x": 300,
+      "y": 80
+    },
+    {
+      "id": "read-kkt-haechan",
+      "label": "读到李楷灿的消息",
+      "type": "event",
+      "event": "read",
+      "target": "kkt-1",
+      "conditions": [],
+      "logic": "and",
+      "actions": [
+        {
+          "type": "notification",
+          "key": "",
+          "value": "他很快又发来一条消息。选择你的回应。"
+        }
+      ],
+      "next": [
+        "first-choice"
+      ],
+      "once": true,
+      "x": 520,
+      "y": 80
+    },
+    {
+      "id": "first-choice",
+      "label": "你要怎么回复？",
+      "type": "choice",
+      "event": "",
+      "target": "",
+      "conditions": [],
+      "logic": "and",
+      "actions": [],
+      "next": [
+        "reply-cold",
+        "reply-soft"
+      ],
+      "once": true,
+      "x": 740,
+      "y": 80
+    },
+    {
+      "id": "reply-cold",
+      "label": "冷淡地回复",
+      "type": "ending",
+      "event": "choose",
+      "target": "reply-cold",
+      "conditions": [],
+      "logic": "and",
+      "actions": [
+        {
+          "type": "variable",
+          "key": "blacken",
+          "value": 1
+        },
+        {
+          "type": "ending",
+          "key": "",
+          "value": "冷处理：你没有给他想要的答案。"
+        }
+      ],
+      "next": [],
+      "once": true,
+      "x": 960,
+      "y": 20
+    },
+    {
+      "id": "reply-soft",
+      "label": "承认自己也没放下",
+      "type": "ending",
+      "event": "choose",
+      "target": "reply-soft",
+      "conditions": [],
+      "logic": "and",
+      "actions": [
+        {
+          "type": "variable",
+          "key": "reconcile",
+          "value": 1
+        },
+        {
+          "type": "ending",
+          "key": "",
+          "value": "旧情未了：你承认自己还在意他。"
+        }
+      ],
+      "next": [],
+      "once": true,
+      "x": 960,
+      "y": 160
+    },
+    {
+      "id": "blacken-meet",
+      "label": "黑化值达到线下事件阈值",
+      "type": "event",
+      "event": "variable",
+      "target": "blacken",
+      "conditions": [
+        {
+          "key": "blacken",
+          "op": "gt",
+          "value": 0
+        }
+      ],
+      "logic": "and",
+      "actions": [
+        {
+          "type": "notification",
+          "key": "",
+          "value": "李楷灿发来定位：出来见我。现在。"
+        }
+      ],
+      "next": [],
+      "once": true,
+      "x": 520,
+      "y": 260
+    },
+    {
+      "id": "reconcile-ending",
+      "label": "复合值达到复合阈值",
+      "type": "event",
+      "event": "variable",
+      "target": "reconcile",
+      "conditions": [
+        {
+          "key": "reconcile",
+          "op": "gt",
+          "value": 0
+        }
+      ],
+      "logic": "and",
+      "actions": [
+        {
+          "type": "ending",
+          "key": "",
+          "value": "复合结局：你们决定重新开始。"
+        }
+      ],
+      "next": [],
+      "once": true,
+      "x": 760,
+      "y": 260
+    }
+  ],
+  "tests": [
+    {
+      "name": "打开KakaoTalk并冷淡回复",
+      "steps": [
+        {
+          "event": "openApp",
+          "target": "kakao"
+        },
+        {
+          "event": "read",
+          "target": "kkt-1"
+        },
+        {
+          "choose": "reply-cold"
+        }
+      ],
+      "ending": "冷处理：你没有给他想要的答案。",
+      "expectUnlocked": []
+    },
+    {
+      "name": "打开KakaoTalk并选择坦白",
+      "steps": [
+        {
+          "event": "openApp",
+          "target": "kakao"
+        },
+        {
+          "event": "read",
+          "target": "kkt-1"
+        },
+        {
+          "choose": "reply-soft"
+        }
+      ],
+      "ending": "旧情未了：你承认自己还在意他。",
+      "expectUnlocked": []
+    }
+  ]
+}

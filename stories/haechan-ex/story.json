@@ -57,29 +57,25 @@
           "id": "kkt-1",
           "title": "",
           "body": "你还没睡？",
-          "senderId": "haechan",
-          "time": "2026-10-25 23:06"
+          "senderId": "haechan"
         },
         {
           "id": "kkt-2",
           "title": "",
           "body": "我看到你把以前的照片设成了隐藏。",
-          "senderId": "haechan",
-          "time": "2026-10-25 23:07"
+          "senderId": "haechan"
         },
         {
           "id": "kkt-3",
           "title": "",
           "body": "别装没看见。我们还没聊完。",
-          "senderId": "haechan",
-          "time": "2026-10-25 23:08"
+          "senderId": "haechan"
         },
         {
           "id": "kkt-4",
           "title": "",
           "body": "0606。你应该还记得这个日期吧。",
-          "senderId": "haechan",
-          "time": "2026-10-25 23:09"
+          "senderId": "haechan"
         }
       ]
     },
@@ -96,8 +92,7 @@
           "id": "kkt-friend-1",
           "title": "",
           "body": "你真的还要回他消息吗？",
-          "senderId": "friend",
-          "time": "2026-10-25 22:51"
+          "senderId": "friend"
         }
       ]
     }

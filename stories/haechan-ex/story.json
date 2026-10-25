@@ -2,8 +2,8 @@
   "scriptVersion": 1,
   "id": "haechan-ex-phone",
   "title": "未读来电｜李楷灿的前任",
-  "description": "李楷灿的前任捡到一部属于自己的手机。普通开局密码为0606；0908对应隐藏开局版本。黑化值与复合值只在剧情状态中累计，不显示在选项文字里。打开KakaoTalk触发故事。",
-  "revision": 2,
+  "description": "李楷灿的前任互动手机故事。主开局密码为0606；备忘录中有密码0908的隐藏记录。黑化值与复合值仅在剧情变量中累计，不展示在选项文字里。打开 KakaoTalk 触发开场消息与回复选择。",
+  "revision": 3,
   "phone": {
     "owner": "你",
     "date": "2026-10-25",
@@ -56,22 +56,26 @@
         {
           "id": "kkt-1",
           "body": "过得好吗？",
-          "senderId": "haechan"
+          "senderId": "haechan",
+          "time": "2026-10-25 00:06"
         },
         {
           "id": "kkt-2",
           "body": "明明有一直在看着屏幕",
-          "senderId": "haechan"
+          "senderId": "haechan",
+          "time": "2026-10-25 00:14"
         },
         {
           "id": "kkt-3",
           "body": "为什么不理ㅇㅂ呢？ㅠㅠ",
-          "senderId": "haechan"
+          "senderId": "haechan",
+          "time": "2026-10-25 00:14"
         },
         {
           "id": "kkt-4",
           "body": "好伤心ㅠㅠ",
-          "senderId": "haechan"
+          "senderId": "haechan",
+          "time": "2026-10-25 00:15"
         }
       ]
     },
@@ -105,7 +109,7 @@
       {
         "id": "note-hidden-0908",
         "title": "隐藏记录",
-        "body": "0908。那天发生的事，你们谁都没有向外人提过。打开这条记录，进入隐藏开局线索。",
+        "body": "0908。那天发生的事，你们谁都没有向外人提过。输入密码0908解锁这条隐藏记录，作为隐藏开局线索。",
         "time": "2026-10-25 23:11",
         "sender": "你",
         "hidden": true,
